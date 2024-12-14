@@ -21,7 +21,7 @@ const App = () => {
   const fetchImages = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5002/uploads', {
+      const response = await fetch('https://lcvd-datacollectorbackend.onrender.com/uploads', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const App = () => {
     formData.append('category', category);
 
     try {
-      const response = await fetch('http://localhost:5002/upload', {
+      const response = await fetch('https://lcvd-datacollectorbackend.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
